@@ -1,9 +1,11 @@
 import logging
 from pathlib import Path
 from config import WORKSPACE_PATHS, FOLDER_NAMES
+from persistence import load_module_codes
 from prompt import setup_dir, validate_module_code, get_file_info
 
 logger = logging.getLogger(f"organiser.{__name__}")
+_module_codes = load_module_codes()
 
 def _validate_workspace() -> None:
     for name in FOLDER_NAMES:
@@ -13,4 +15,4 @@ def _validate_workspace() -> None:
             logger.warning(f"'{WORKSPACE_PATHS[name].name}' does not exist inside of workspace.")
             setup_dir(WORKSPACE_PATHS[name], WORKSPACE_PATHS[name].name)
             
-_validate_workspace()    
+_validate_workspace()
