@@ -32,7 +32,8 @@ FOLDER_NAMES = {
 FILE_CATEGORIES = {
     "image",
     "code",
-    "document"
+    "document",
+    "misc"
 }
 
 FILE_TYPE = {
