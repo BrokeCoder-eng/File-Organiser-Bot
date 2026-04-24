@@ -1,0 +1,4 @@
+Workspace structure — your Work/ folder contains Dump/, Coding/, Images/, Documents/, Uni Work/, and Misc/. Coding has language subfolders, and each Uni Work module folder has its own Images/, Coding/, Documents/, and Misc/ subfolders.
+Routing logic — every file in Dump gets checked for a module code first, then by extension against FILE_TYPE. Unknown types prompt you, and new module codes get saved to JSON for persistence across runs.
+Module architecture — you have six files, five of which are complete. You're currently halfway through mover.py, with main.py left to wire everything together.
+Where you left off — mover.py needs to handle conflict resolution with a counter, actually move files using shutil.move(), and return a boolean for success or failure.
